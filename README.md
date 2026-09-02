@@ -30,9 +30,9 @@ dated list of the results that are on the record, each linked to its source. Lig
 every panel is a pane of frosted glass over a slow mesh of light, with a canvas of sun caustics,
 glints and sparkle behind it. Moving the pointer disturbs the water; clicking sends out a ripple.
 
-One panel is dark on purpose. Most of my reputation lives in private, invitation-only programs, so
-the section about them is the only unlit thing on the page: the part of the work nobody sees from
-the surface.
+Most of my reputation lives in private, invitation-only programs whose names are withheld as their
+terms require — so the page leans on what can be checked: the platform profiles, the dated
+highlights, and the vendors' own acknowledgement pages.
 
 ## Where the figures come from
 

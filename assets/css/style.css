@@ -1,8 +1,7 @@
 /* ══════════════════════════════════════════════════════════════
    Mahmud Hasan Sizan — a bug in every wave
    Proof first. Light, calm and glassy: every claim on the page links
-   to something you can check, and the one dark panel is the work
-   nobody can see.
+   to something you can check.
    ══════════════════════════════════════════════════════════════ */
 
 :root{
@@ -325,6 +324,8 @@ a{ color:inherit; }
   transition:transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .logo:hover{ transform:translateY(-4px); box-shadow:var(--shadow-lg); z-index:1; }
+/* hall-of-fame tiles link to the page that names me */
+a.logo{ text-decoration:none; color:inherit; }
 .logo__mk{ width:32px; height:32px; display:grid; place-items:center; }
 .logo__mk svg{ width:100%; height:100%; fill:var(--ink); opacity:.72;
                transition:fill .5s var(--ease), opacity .5s var(--ease), filter .5s var(--ease); }
@@ -337,57 +338,7 @@ a{ color:inherit; }
 .logo--word:hover .logo__n{ color:var(--aqua-d); }
 @media (max-width:520px){ .logos{ grid-template-columns:repeat(2,1fr) } }
 
-/* ═══════════ 04 — water nobody can see ═══════════
-   The one dark pane on the page. */
-
-.sec--dark{ padding-inline:clamp(.75rem,3vw,2rem); }
-.sec--dark .wrap{
-  padding:clamp(1.6rem,4vw,3rem); border-radius:26px; color:#E7F2F7;
-  background:
-    radial-gradient(ellipse 70% 90% at 100% 0%,  rgba(31,198,219,.24), transparent 60%),
-    radial-gradient(ellipse 60% 80% at 0% 100%,  rgba(61,139,255,.20), transparent 60%),
-    linear-gradient(165deg, #0B1B2B 0%, #0E2537 55%, #0A1826 100%);
-  border:1px solid rgba(255,255,255,.09);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 0 0 1px rgba(11,27,43,.10),
-             0 30px 80px -30px rgba(11,27,43,.6), 0 60px 120px -60px rgba(10,143,168,.5);
-}
-.sec--dark .mark{ color:rgba(231,242,247,.5); }
-.sec--dark .mark span{ color:var(--aqua-l); }
-.sec--dark .mark::after{ background:linear-gradient(90deg, rgba(255,255,255,.14), transparent); }
-.sec--dark h2{ color:#fff; }
-.sec--dark .sub{ color:rgba(231,242,247,.78); }
-.sec--dark .sub b{ color:#fff; }
-
-.flagship{
-  border:1px solid rgba(255,255,255,.12); border-radius:var(--r);
-  background:linear-gradient(115deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 45%), rgba(255,255,255,.05);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.14);
-  padding:clamp(1.4rem,3vw,2.4rem); margin-bottom:clamp(1.2rem,2.6vw,1.8rem);
-}
-.flagship__tag{ color:var(--aqua-l); font-size:.5625rem; letter-spacing:.24em; }
-.flagship__row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1.3rem; margin:1.2rem 0 1.3rem; }
-.flagship__row div{ display:grid; gap:.3rem; }
-.flagship__row b{
-  font-family:var(--serif); font-weight:200; font-size:clamp(2.2rem,4.6vw,3.3rem); line-height:1;
-  background:linear-gradient(120deg, #fff 0%, var(--aqua-l) 120%); -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.flagship__row span{ font-family:var(--mono); font-size:.5625rem; letter-spacing:.13em; text-transform:uppercase; color:rgba(231,242,247,.55); }
-.flagship__note{ margin:0; color:rgba(231,242,247,.8); font-size:.9375rem; max-width:60ch; }
-
-.ghosts{ list-style:none; margin:0; padding:0; display:grid; gap:.45rem; }
-.ghosts li{
-  position:relative; display:flex; align-items:center; gap:.9rem; padding:.55rem .95rem; border-radius:12px;
-  border:1px solid rgba(255,255,255,.09);
-  background:linear-gradient(90deg, rgba(31,198,219,.28) 0%, rgba(31,198,219,.07) calc(var(--r,20) * 1%), rgba(255,255,255,.03) calc(var(--r,20) * 1%));
-  transition:border-color .4s var(--ease);
-}
-.ghosts li:hover{ border-color:rgba(31,198,219,.45); }
-.ghosts li span{ color:#fff; font-size:.625rem; min-width:6ch; }
-.ghosts li em{ font-style:normal; color:rgba(231,242,247,.55); font-family:var(--mono); font-size:.5625rem; letter-spacing:.14em; }
-.ghosts li::after{ content:"private"; margin-left:auto; font-family:var(--mono); font-size:.5rem; letter-spacing:.2em;
-                   text-transform:uppercase; color:rgba(231,242,247,.4); }
-
-/* ═══════════ 05 — what I find ═══════════ */
+/* ═══════════ 04 — what I find ═══════════ */
 
 .classes{ list-style:none; margin:0; padding:.3rem clamp(.4rem,1.5vw,1rem); overflow:hidden; }
 .classes li{
@@ -402,7 +353,7 @@ a{ color:inherit; }
 .classes li em{ font-style:normal; color:var(--mute); font-size:.875rem; }
 @media (max-width:740px){ .classes li{ grid-template-columns:52px 1fr } .classes li em{ grid-column:2 } }
 
-/* ═══════════ 06 — tools ═══════════ */
+/* ═══════════ 05 — tools ═══════════ */
 
 .tools{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(.6rem,1.2vw,.9rem); }
 @media (max-width:760px){ .tools{ grid-template-columns:1fr } }
@@ -419,7 +370,7 @@ a{ color:inherit; }
            transition:color .4s var(--ease), transform .4s var(--ease); }
 .chips li:hover{ color:var(--aqua-d); transform:translateY(-1px); }
 
-/* ═══════════ 07 — contact ═══════════ */
+/* ═══════════ 06 — contact ═══════════ */
 
 .sec--contact{ padding-bottom:0; padding-inline:clamp(.75rem,3vw,2rem); }
 .sec--contact > .wrap{ padding:clamp(1.6rem,4vw,3rem); border-radius:26px; }
