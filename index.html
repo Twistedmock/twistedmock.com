@@ -12,20 +12,23 @@
 <link rel="preload" href="assets/fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2303070C'/><path d='M8 62q17-22 34 0t34 0' stroke='%235FE0CC' stroke-width='7' fill='none' stroke-linecap='round'/></svg>">
+<meta name="theme-color" content="#F4F8FB">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%231FC6DB'/><stop offset='1' stop-color='%233D8BFF'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23F4F8FB'/><path d='M12 60q19-24 38 0t38 0' stroke='url(%23g)' stroke-width='9' fill='none' stroke-linecap='round'/></svg>">
 </head>
 <body>
 
+<div class="orbs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="grid-bg" aria-hidden="true"></div>
 <canvas id="water" aria-hidden="true"></canvas>
-<div class="deepen" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
 
 <!-- depth gauge -->
 <aside class="gauge" aria-hidden="true">
-  <div class="gauge__rail"><i></i></div>
-  <div class="gauge__read">
-    <b id="g-depth">0</b><span>m</span>
-    <em id="g-zone">Epipelagic</em>
+  <div class="gauge__glass">
+    <div class="gauge__rail"><i></i></div>
+    <div class="gauge__read">
+      <b id="g-depth">0</b><span>m</span>
+      <em id="g-zone">Epipelagic</em>
+    </div>
   </div>
 </aside>
 
@@ -93,8 +96,8 @@
     <h2 class="reveal">Thirty companies put their name to my findings.</h2>
     <p class="sub reveal">
       Every mark below is a HackerOne program that accepted at least one of my reports as
-      valid — the public ones. Rendered in a single ink, because down here everything glows
-      the same. My private programs, most of my work, can't be named — that's further down.
+      valid — the public ones. Rendered in a single ink, so no logo shouts over another.
+      My private programs, most of my work, can't be named — that's further down.
     </p>
   </div>
 

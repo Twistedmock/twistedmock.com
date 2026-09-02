@@ -1,4 +1,4 @@
-import { Abyss } from './abyss.js';
+import { Surface } from './surface.js';
 
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $  = (s, r = document) => r.querySelector(s);
@@ -6,7 +6,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 
 /* ── the water ──────────────────────────────────────────── */
-const water = new Abyss($('#water'), { reduced: RM });
+const water = new Surface($('#water'), { reduced: RM });
 
 /* ── descent: scroll drives depth, depth drives everything ──
    Metres are interpolated between the sections' own data-depth
@@ -22,7 +22,7 @@ const marks = [{ y: 0, m: 0, zone: 'Epipelagic' }].concat(
 const gaugeFill = $('.gauge__rail i');
 const gDepth = $('#g-depth');
 const gZone  = $('#g-zone');
-const deepen = $('.deepen');
+const root   = document.documentElement;
 const MAXM   = 6000;
 
 function positions() {
@@ -54,8 +54,8 @@ function onScroll() {
 
     const d = clamp(m / MAXM, 0, 1);
     water.setDepth(d);
-    if (deepen) deepen.style.opacity = (d * 0.9).toFixed(3);
-    if (gaugeFill) gaugeFill.style.height = `${(d * 100).toFixed(1)}%`;
+    root.style.setProperty('--depth', d.toFixed(3));   // the light in the CSS follows too
+    if (gaugeFill) gaugeFill.style.width = `${(d * 100).toFixed(1)}%`;
     if (gDepth) gDepth.textContent = Math.round(m).toLocaleString('en-US');
     if (gZone) {
       const zone = m < 200 ? 'Epipelagic' : m < 1000 ? 'Mesopelagic'
