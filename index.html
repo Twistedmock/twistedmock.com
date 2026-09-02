@@ -8,6 +8,8 @@
 <meta property="og:title" content="Mahmud Hasan Sizan — Offensive Security Researcher">
 <meta property="og:description" content="A bug in every wave. 67 programs, 102 resolved, 100+ paid bounties — and 84% of it in water nobody can see.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://twistedmock.com/">
+<link rel="canonical" href="https://twistedmock.com/">
 <link rel="preload" href="assets/fonts/Newsreader-200-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
@@ -21,52 +23,53 @@
 <div class="grid-bg" aria-hidden="true"></div>
 <canvas id="water" aria-hidden="true"></canvas>
 
-<!-- depth gauge -->
-<aside class="gauge" aria-hidden="true">
-  <div class="gauge__glass">
-    <div class="gauge__rail"><i></i></div>
-    <div class="gauge__read">
-      <b id="g-depth">0</b><span>m</span>
-      <em id="g-zone">Epipelagic</em>
-    </div>
-  </div>
-</aside>
-
-<!-- ══════════════ 0 M — SURFACE ══════════════ -->
-<header class="hero" id="top">
-  <div class="hero__top">
+<!-- ══════════════ top bar: who, and where to check ══════════════ -->
+<header class="top" id="top">
+  <a class="top__id" href="#top" aria-label="twistedmock — back to top">
+    <svg viewBox="0 0 52 28" aria-hidden="true"><path d="M2 18q12-16 24 0t24 0" fill="none" stroke="#0A8FA8" stroke-width="3.5" stroke-linecap="round"/></svg>
     <span class="mono">twistedmock</span>
-    <span class="mono hero__avail"><i></i> Open to work</span>
-  </div>
-
-  <div class="hero__mid">
-    <p class="hero__kicker mono">Offensive Security Researcher</p>
-    <h1><em>Mahmud</em> Hasan Sizan</h1>
-    <p class="hero__line">A bug in every wave.</p>
-    <p class="hero__proof">Top-1,000 hacker on HackerOne — credited by <b>Apple</b>, <b>Goldman Sachs</b>, <b>SpaceX</b> and <b>GitHub</b>.</p>
-    <p class="hero__open mono">Penetration testing · red teaming · application &amp; vulnerability research &nbsp;—&nbsp; remote or relocating · GMT+6</p>
-  </div>
-
-  <div class="hero__foot">
-    <div class="hero__cta">
-      <a class="cue" href="#record"><span class="mono">Descend</span><i></i></a>
-      <a class="hero__btn mono" href="#contact">Get in touch →</a>
-      <a class="hero__link mono" href="cv.pdf" download>CV (PDF) ↓</a>
-    </div>
-    <span class="mono hero__hint">Move to disturb the water</span>
-  </div>
+  </a>
+  <nav class="top__nav mono" aria-label="Profiles">
+    <a href="https://hackerone.com/twistedmock" target="_blank" rel="noopener noreferrer">HackerOne</a>
+    <a href="https://bugcrowd.com/twistedmock" target="_blank" rel="noopener noreferrer">Bugcrowd</a>
+    <a href="https://github.com/Twistedmock" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/twistedmock/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://x.com/twisted_mock" target="_blank" rel="noopener noreferrer">X</a>
+  </nav>
+  <span class="chip mono"><i></i> Open to work</span>
 </header>
+
+<!-- ══════════════ intro ══════════════ -->
+<section class="intro">
+  <p class="intro__kicker mono">Offensive Security Researcher · Bug Bounty Hunter</p>
+  <h1><em>Mahmud</em> Hasan Sizan</h1>
+  <p class="intro__lead">
+    I find vulnerabilities in the applications of companies like <b>Apple</b>, <b>Goldman Sachs</b>,
+    <b>SpaceX</b> and <b>GitHub</b> — most of it inside private, invitation-only bug bounty programs.
+    Six years on HackerOne: <b>top-1,000 all-time</b>, <b>HackerOne Clear</b>, <b>100+ paid bounties</b>.
+  </p>
+  <p class="intro__fit mono">Open to penetration testing, red teaming and vulnerability research roles &nbsp;·&nbsp; remote worldwide or relocating &nbsp;·&nbsp; GMT+6</p>
+  <div class="intro__act">
+    <a class="btn btn--primary" href="mailto:twistedmock@wearehackerone.com">twistedmock@wearehackerone.com <i>↗</i></a>
+    <a class="btn btn--glass" href="cv.pdf" download>CV — one page, PDF <i>↓</i></a>
+  </div>
+  <p class="intro__tag">
+    <svg viewBox="0 0 52 28" aria-hidden="true"><path d="M2 18q12-16 24 0t24 0" fill="none" stroke-width="3" stroke-linecap="round"/></svg>
+    A bug in every wave.
+  </p>
+  <span class="intro__hint mono">Move to disturb the water</span>
+</section>
 
 <main>
 
-<!-- ══════════════ 200 M — THE RECORD ══════════════ -->
-<section class="sec" id="record" data-depth="200" data-zone="Mesopelagic">
+<!-- ══════════════ 01 — THE RECORD ══════════════ -->
+<section class="sec" id="record">
   <div class="wrap">
-    <p class="mark mono"><span>200 m</span> The record</p>
+    <p class="mark mono"><span>01</span> The record</p>
     <h2 class="reveal">Six years of it, and the numbers hold up.</h2>
     <p class="sub reveal">
       Every figure below was pulled live from the HackerOne API on 15 August 2026 — not from a CV.
-      They're checkable: my profile is <a href="https://hackerone.com/twistedmock" target="_blank" rel="noopener noreferrer">public</a>.
+      They're checkable against my <a href="https://hackerone.com/twistedmock" target="_blank" rel="noopener noreferrer">public profile</a>.
     </p>
 
     <div class="grid">
@@ -89,19 +92,42 @@
   </div>
 </section>
 
-<!-- ══════════════ 1000 M — EVERY WAVE ══════════════ -->
-<section class="sec sec--waves" id="waves" data-depth="1000" data-zone="Bathypelagic">
+<!-- ══════════════ 02 — HIGHLIGHTS ══════════════ -->
+<section class="sec" id="highlights">
   <div class="wrap">
-    <p class="mark mono"><span>1 000 m</span> Every wave · HackerOne</p>
-    <h2 class="reveal">Thirty companies put their name to my findings.</h2>
+    <p class="mark mono"><span>02</span> Highlights</p>
+    <h2 class="reveal">The findings I can point to.</h2>
     <p class="sub reveal">
-      Every mark below is a HackerOne program that accepted at least one of my reports as
-      valid — the public ones. Rendered in a single ink, so no logo shouts over another.
-      My private programs, most of my work, can't be named — that's further down.
+      Most of my work is under private-program terms and can't be written up. These are the results
+      that are on the record — dated, and linked to the source where one exists.
     </p>
-  </div>
 
-  <ol class="logos">
+    <ol class="timeline reveal">
+      <li><time datetime="2026-05">May 2026</time><div><b>Two bounties from Goldman Sachs.</b><em>3 May and 24 April 2026 — the second co-authored with fellow Bangladeshi hunter refat0g.</em></div><a class="proof" href="https://hackerone.com/twistedmock" target="_blank" rel="noopener noreferrer">HackerOne ↗</a></li>
+      <li><time datetime="2026-02">Feb 2026</time><div><b>Named in Apple's security acknowledgements — for the third time.</b><em>Web server security. Listed by name on Apple's own page.</em></div><a class="proof" href="https://support.apple.com/en-us/102774" target="_blank" rel="noopener noreferrer">Apple ↗</a></li>
+      <li><time datetime="2026">2026</time><div><b>Top-1,000 all-time on HackerOne, at #807.</b><em>3,447 reputation, 102 resolved reports, signal in the 81st percentile, impact in the 84th.</em></div><a class="proof" href="https://hackerone.com/twistedmock" target="_blank" rel="noopener noreferrer">HackerOne ↗</a></li>
+      <li><span class="when">Ongoing</span><div><b>Ranked #1 of every hunter on a private HackerOne program.</b><em>Forty-eight valid reports and 1,075 reputation on a single program. It can't be named, as its terms require — it is the best evidence of what I do.</em></div></li>
+      <li><time datetime="2025-08">Jul – Aug 2025</time><div><b>Apple security acknowledgements, twice in two months.</b><em>July 2025 and August 2025.</em></div><a class="proof" href="https://support.apple.com/en-us/102774" target="_blank" rel="noopener noreferrer">Apple ↗</a></li>
+      <li><span class="when">Bugcrowd</span><div><b>Public hall of fame at SpaceX, Atlassian, Twilio and the U.S. Department of Veterans Affairs.</b><em>Sixty-four valid findings on a second platform; three more programs private.</em></div><a class="proof" href="https://bugcrowd.com/twistedmock" target="_blank" rel="noopener noreferrer">Bugcrowd ↗</a></li>
+      <li><time datetime="2023-03">Feb – Mar 2023</time><div><b>Four Adobe findings resolved inside six weeks.</b><em>The densest run on any named program — five valid reports in total.</em></div></li>
+      <li><time datetime="2021-09">Sep 2021</time><div><b>GitHub report resolved; GitHub Security Researcher.</b><em>Resolved 28 September 2021, with the badge that came with it.</em></div><a class="proof" href="https://github.com/Twistedmock" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+      <li><time datetime="2020-05">May 2020</time><div><b>Joined HackerOne.</b><em>Everything above happened in the six years since.</em></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════ 03 — COMPANIES ══════════════ -->
+<section class="sec" id="companies">
+  <div class="wrap">
+    <p class="mark mono"><span>03</span> Every wave</p>
+    <h2 class="reveal">Forty companies put their name to my findings.</h2>
+    <p class="sub reveal">
+      Every mark below is a program that accepted at least one of my reports as valid — the public
+      ones, on both platforms. Rendered in a single ink, so no logo shouts over another.
+    </p>
+
+    <div class="group reveal"><h3>HackerOne</h3><span class="mono">30 public programs</span></div>
+    <ol class="logos">
     <li class="logo reveal"><span class="logo__mk"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></svg></span><span class="logo__n">PayPal</span></li>
     <li class="logo reveal"><span class="logo__mk"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425zM8.884 1.376H0v21.248zm15.116 0h-8.884L24 22.624Z"/></svg></span><span class="logo__n">Adobe</span></li>
     <li class="logo reveal"><span class="logo__mk"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span><span class="logo__n">GitHub</span></li>
@@ -134,26 +160,8 @@
     <li class="logo logo--word reveal"><span class="logo__n">U.S. GSA</span></li>
   </ol>
 
-  <div class="wrap">
-    <p class="note mono reveal">
-      And these are only the ones I'm allowed to name — about a sixth of the work. The rest is below.
-    </p>
-  </div>
-</section>
-
-<!-- ══════════════ 2000 M — BUGCROWD ══════════════ -->
-<section class="sec sec--waves" id="bugcrowd" data-depth="2000" data-zone="Bathypelagic">
-  <div class="wrap">
-    <p class="mark mono"><span>2 000 m</span> A second current · Bugcrowd</p>
-    <h2 class="reveal">And ten more, on Bugcrowd.</h2>
-    <p class="sub reveal">
-      The same work on a second platform. SpaceX, Atlassian, Twilio, the U.S. Department of
-      Veterans Affairs — each took one of my reports into their public hall of fame. Three
-      more are private, and stay that way.
-    </p>
-  </div>
-
-  <ol class="logos">
+    <div class="group reveal"><h3>Bugcrowd</h3><span class="mono">10 public programs</span></div>
+    <ol class="logos">
     <li class="logo reveal"><span class="logo__mk"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M24 7.417C8.882 8.287 1.89 14.75.321 16.28L0 16.583h2.797C10.356 9.005 21.222 7.663 24 7.417zm-17.046 6.35c-.472.321-.945.68-1.398 1.02l2.457 1.796h2.778zM2.948 10.8H.189l3.25 2.381c.473-.321 1.02-.661 1.512-.945Z"/></svg></span><span class="logo__n">SpaceX</span></li>
     <li class="logo reveal"><span class="logo__mk"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M7.12 11.084a.683.683 0 00-1.16.126L.075 22.974a.703.703 0 00.63 1.018h8.19a.678.678 0 00.63-.39c1.767-3.65.696-9.203-2.406-12.52zM11.434.386a15.515 15.515 0 00-.906 15.317l3.95 7.9a.703.703 0 00.628.388h8.19a.703.703 0 00.63-1.017L12.63.38a.664.664 0 00-1.196.006z"/></svg></span><span class="logo__n">Atlassian</span></li>
     <li class="logo reveal"><span class="logo__mk"><svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 0C5.381-.008.008 5.352 0 11.971V12c0 6.64 5.359 12 12 12 6.64 0 12-5.36 12-12 0-6.641-5.36-12-12-12zm0 20.801c-4.846.015-8.786-3.904-8.801-8.75V12c-.014-4.846 3.904-8.786 8.75-8.801H12c4.847-.014 8.786 3.904 8.801 8.75V12c.015 4.847-3.904 8.786-8.75 8.801H12zm5.44-11.76c0 1.359-1.12 2.479-2.481 2.479-1.366-.007-2.472-1.113-2.479-2.479 0-1.361 1.12-2.481 2.479-2.481 1.361 0 2.481 1.12 2.481 2.481zm0 5.919c0 1.36-1.12 2.48-2.481 2.48-1.367-.008-2.473-1.114-2.479-2.48 0-1.359 1.12-2.479 2.479-2.479 1.361-.001 2.481 1.12 2.481 2.479zm-5.919 0c0 1.36-1.12 2.48-2.479 2.48-1.368-.007-2.475-1.113-2.481-2.48 0-1.359 1.12-2.479 2.481-2.479 1.358-.001 2.479 1.12 2.479 2.479zm0-5.919c0 1.359-1.12 2.479-2.479 2.479-1.367-.007-2.475-1.112-2.481-2.479 0-1.361 1.12-2.481 2.481-2.481 1.358 0 2.479 1.12 2.479 2.481z"/></svg></span><span class="logo__n">Twilio</span></li>
@@ -165,12 +173,17 @@
     <li class="logo logo--word reveal"><span class="logo__n">Monash University</span></li>
     <li class="logo logo--word reveal"><span class="logo__n">U.S. Veterans Affairs</span></li>
   </ol>
+
+    <p class="note mono reveal">
+      And these are only the ones I'm allowed to name — about a sixth of the work. The rest is below.
+    </p>
+  </div>
 </section>
 
-<!-- ══════════════ 4000 M — THE DARK ══════════════ -->
-<section class="sec sec--dark" id="dark" data-depth="4000" data-zone="Abyssopelagic">
+<!-- ══════════════ 04 — WATER NOBODY CAN SEE ══════════════ -->
+<section class="sec sec--dark" id="private">
   <div class="wrap">
-    <p class="mark mono"><span>4 000 m</span> Water nobody can see</p>
+    <p class="mark mono"><span>04</span> Water nobody can see</p>
     <h2 class="reveal">Eighty-four per cent of the work is invisible.</h2>
     <p class="sub reveal">
       Twenty-eight of my sixty-seven programs are private — invitation-only, names withheld
@@ -204,50 +217,10 @@
   </div>
 </section>
 
-<!-- ══════════════ 5000 M — ACKNOWLEDGED ══════════════ -->
-<section class="sec" id="credits" data-depth="5000" data-zone="Abyssopelagic">
+<!-- ══════════════ 05 — WHAT I FIND ══════════════ -->
+<section class="sec" id="classes">
   <div class="wrap">
-    <p class="mark mono"><span>5 000 m</span> Acknowledged</p>
-    <h2 class="reveal">Named by the people whose systems I broke.</h2>
-
-    <div class="creds">
-      <article class="cred cred--apple reveal">
-        <header><h3>Apple</h3><span class="mono">×3 · web server security</span></header>
-        <p>Listed by name in Apple's official security acknowledgements — three separate months.</p>
-        <ul class="mono">
-          <li>February 2026</li><li>August 2025</li><li>July 2025</li>
-        </ul>
-        <a class="cred__src mono" href="https://support.apple.com/en-us/102774" target="_blank" rel="noopener noreferrer">support.apple.com/en-us/102774 ↗</a>
-      </article>
-
-      <article class="cred reveal">
-        <header><h3>Goldman Sachs</h3><span class="mono">bounty awarded</span></header>
-        <p>Two bounties awarded in May 2026 — my most recent notable wins, one of them
-        co-authored with fellow Bangladeshi hunter <b>refat0g</b>.</p>
-        <ul class="mono"><li>3 May 2026</li><li>24 Apr 2026 · collaboration</li></ul>
-      </article>
-
-      <article class="cred reveal">
-        <header><h3>GitHub</h3><span class="mono">security researcher</span></header>
-        <p>Report resolved September 2021, and the GitHub Security Researcher badge that
-        came with it.</p>
-        <ul class="mono"><li>Resolved 28 Sep 2021</li></ul>
-      </article>
-
-      <article class="cred reveal">
-        <header><h3>Adobe</h3><span class="mono">5 valid reports</span></header>
-        <p>Four findings resolved inside six weeks in early 2023 — the densest run on any
-        named program.</p>
-        <ul class="mono"><li>Feb – Mar 2023 · ×4 resolved</li></ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ 5500 M — CLASSES ══════════════ -->
-<section class="sec" id="classes" data-depth="5500" data-zone="Abyssopelagic">
-  <div class="wrap">
-    <p class="mark mono"><span>5 500 m</span> What I find</p>
+    <p class="mark mono"><span>05</span> What I find</p>
     <h2 class="reveal">Six OWASP categories, each confirmed by HackerOne's own badge.</h2>
     <p class="sub reveal">Not a skills list. Badges are only issued on a valid report of that class.</p>
 
@@ -262,10 +235,10 @@
   </div>
 </section>
 
-<!-- ══════════════ 5800 M — INSTRUMENTS ══════════════ -->
-<section class="sec" id="instruments" data-depth="5800" data-zone="Abyssopelagic">
+<!-- ══════════════ 06 — TOOLS ══════════════ -->
+<section class="sec" id="tools">
   <div class="wrap">
-    <p class="mark mono"><span>5 800 m</span> Instruments</p>
+    <p class="mark mono"><span>06</span> Tools</p>
     <h2 class="reveal">Reconnaissance at this scale needs tools nobody ships.</h2>
 
     <div class="tools">
@@ -291,26 +264,29 @@
   </div>
 </section>
 
-<!-- ══════════════ 6000 M — CONTACT ══════════════ -->
-<section class="sec sec--contact" id="contact" data-depth="6000" data-zone="Hadal">
+<!-- ══════════════ 07 — CONTACT ══════════════ -->
+<section class="sec sec--contact" id="contact">
   <div class="wrap">
-    <p class="mark mono"><span>6 000 m</span> Surface</p>
+    <p class="mark mono"><span>07</span> Say hello</p>
     <h2 class="reveal contact__h">Open to offensive-security work — penetration testing, attack-surface assessment, red teaming, vulnerability research. Remote, or relocating.</h2>
 
     <p class="contact__meta mono reveal">Available now &nbsp;·&nbsp; full-time or contract &nbsp;·&nbsp; remote worldwide or relocating &nbsp;·&nbsp; GMT+6</p>
 
-    <a class="mail reveal" href="mailto:mahmudhasan3801@gmail.com">
-      <span class="mono">mahmudhasan3801@gmail.com</span><i>↗</i>
-    </a>
-
-    <a class="cvbtn mono reveal" href="cv.pdf" download>Download CV — one page, PDF <i>↓</i></a>
+    <div class="contact__act reveal">
+      <a class="btn btn--primary" href="mailto:twistedmock@wearehackerone.com">twistedmock@wearehackerone.com <i>↗</i></a>
+      <a class="btn btn--glass" href="cv.pdf" download>Download CV — one page, PDF <i>↓</i></a>
+    </div>
+    <p class="contact__why reveal">
+      That's my HackerOne researcher address — it forwards straight to my inbox, not a queue, and
+      the handle is the same one on every profile below.
+    </p>
 
     <ul class="links reveal">
       <li><a href="https://hackerone.com/twistedmock" target="_blank" rel="noopener noreferrer">HackerOne <i>↗</i></a></li>
+      <li><a href="https://bugcrowd.com/twistedmock" target="_blank" rel="noopener noreferrer">Bugcrowd <i>↗</i></a></li>
       <li><a href="https://github.com/Twistedmock" target="_blank" rel="noopener noreferrer">GitHub <i>↗</i></a></li>
       <li><a href="https://www.linkedin.com/in/twistedmock/" target="_blank" rel="noopener noreferrer">LinkedIn <i>↗</i></a></li>
       <li><a href="https://x.com/twisted_mock" target="_blank" rel="noopener noreferrer">X <i>↗</i></a></li>
-      <li><a href="https://bugcrowd.com/twistedmock" target="_blank" rel="noopener noreferrer">Bugcrowd <i>↗</i></a></li>
     </ul>
 
     <p class="langs mono reveal">English — IELTS 8.0 &nbsp;·&nbsp; বাংলা &nbsp;·&nbsp; हिन्दी &nbsp;·&nbsp; اردو</p>
@@ -322,11 +298,11 @@
         Figures come from the HackerOne and Bugcrowd APIs (retrieved 15 August 2026) and each
         vendor's own acknowledgements page. Only public programs are named — private programs on
         both platforms are withheld, as their terms require. Intigriti and OpenBugBounty work is
-        not counted here.
+        not counted here. Security contact: <a href="/.well-known/security.txt">security.txt</a>.
       </p>
       <p class="mono foot__end">
         <span>Mahmud Hasan Sizan · 2026</span>
-        <a href="#top">Back to the surface ↑</a>
+        <a href="#top">Back to the top ↑</a>
       </p>
     </div>
   </footer>

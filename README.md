@@ -15,22 +15,24 @@ index.html              all copy and figures
 assets/css/style.css    the design system
 assets/css/fonts.css    self-hosted @font-face
 assets/js/surface.js    the water — sun caustics, drifting glints, sparkle, and pointer ripples
-assets/js/main.js       depth-driven scroll, depth gauge, reveals, count-up figures
+assets/js/main.js       scroll → water depth, reveals, count-up figures
 assets/fonts/           woff2, self-hosted
 cv.pdf                  one-page CV, generated from the same figures
-serve.py                static file server (runs as portfolio.service on :7777, behind a reverse proxy)
+.well-known/security.txt  RFC 9116 security contact (mirrored at /security.txt)
+serve.py                static file server used for staging on the VPS; production is GitHub Pages
 ```
 
 ## The concept — *a bug in every wave*
 
-The page is a **descent through clear water**. Scroll position maps to depth in metres,
-interpolated between each section's `data-depth`, and drives the gauge and the water itself — a
-canvas of sun caustics, drifting glints and sparkle over a light, glassy surface, with every panel
-a pane of frosted glass. Moving the pointer disturbs the water; clicking sends out a ripple.
+Proof first. The page is built the way the strongest bug-bounty portfolios are built — a plain
+statement of what I do and for whom, the platform profiles up top where they can be checked, then a
+dated list of the results that are on the record, each linked to its source. Light, calm and glassy:
+every panel is a pane of frosted glass over a slow mesh of light, with a canvas of sun caustics,
+glints and sparkle behind it. Moving the pointer disturbs the water; clicking sends out a ripple.
 
-That structure carries the argument. Most of my reputation lives in private, invitation-only
-programs — so the deepest section, the one you have to travel furthest to reach, is the single
-dark panel on an otherwise sunlit page: the part of the work nobody sees from the surface.
+One panel is dark on purpose. Most of my reputation lives in private, invitation-only programs, so
+the section about them is the only unlit thing on the page: the part of the work nobody sees from
+the surface.
 
 ## Where the figures come from
 

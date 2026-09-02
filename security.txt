@@ -1,0 +1,7 @@
+# Mahmud Hasan Sizan (twistedmock) — security researcher
+# RFC 9116
+Contact: mailto:twistedmock@wearehackerone.com
+Contact: https://hackerone.com/twistedmock
+Preferred-Languages: en, bn, hi, ur
+Canonical: https://twistedmock.com/.well-known/security.txt
+Expires: 2027-09-01T00:00:00.000Z

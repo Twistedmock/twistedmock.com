@@ -8,64 +8,23 @@ const clamp = (v, a, b) => v < a ? a : v > b ? b : v;
 /* ── the water ──────────────────────────────────────────── */
 const water = new Surface($('#water'), { reduced: RM });
 
-/* ── descent: scroll drives depth, depth drives everything ──
-   Metres are interpolated between the sections' own data-depth
-   values, so the gauge always agrees with the section headings. */
-const marks = [{ y: 0, m: 0, zone: 'Epipelagic' }].concat(
-  $$('section[data-depth]').map(s => ({
-    el: s,
-    m: +s.dataset.depth,
-    zone: s.dataset.zone || '',
-  }))
-);
-
-const gaugeFill = $('.gauge__rail i');
-const gDepth = $('#g-depth');
-const gZone  = $('#g-zone');
-const root   = document.documentElement;
-const MAXM   = 6000;
-
-function positions() {
-  for (const mk of marks) if (mk.el) mk.y = mk.el.offsetTop;
-}
-positions();
-window.addEventListener('resize', () => { positions(); onScroll(); }, { passive: true });
-
+/* ── reading depth: how far down the page you are drives how calm
+   the water is. Written to CSS too, so the light follows. */
+const root = document.documentElement;
 let ticking = false;
 function onScroll() {
   if (ticking) return;
   ticking = true;
   requestAnimationFrame(() => {
-    // measured from the top of the viewport, so the gauge reads 0 m while
-    // the hero is still on screen and hits a section's depth as it lands
-    const y = window.scrollY;
-
-    // interpolate metres between the two surrounding section marks
-    let m = 0;
-    for (let i = 0; i < marks.length; i++) {
-      const a = marks[i], b = marks[i + 1];
-      if (!b) { m = a.m; break; }
-      if (y < b.y) {
-        const t = clamp((y - a.y) / ((b.y - a.y) || 1), 0, 1);
-        m = a.m + (b.m - a.m) * t;
-        break;
-      }
-    }
-
-    const d = clamp(m / MAXM, 0, 1);
+    const max = root.scrollHeight - window.innerHeight;
+    const d = max > 0 ? clamp(window.scrollY / max, 0, 1) : 0;
     water.setDepth(d);
-    root.style.setProperty('--depth', d.toFixed(3));   // the light in the CSS follows too
-    if (gaugeFill) gaugeFill.style.width = `${(d * 100).toFixed(1)}%`;
-    if (gDepth) gDepth.textContent = Math.round(m).toLocaleString('en-US');
-    if (gZone) {
-      const zone = m < 200 ? 'Epipelagic' : m < 1000 ? 'Mesopelagic'
-                 : m < 4000 ? 'Bathypelagic' : m < 6000 ? 'Abyssopelagic' : 'Hadal';
-      if (gZone.textContent !== zone) gZone.textContent = zone;
-    }
+    root.style.setProperty('--depth', d.toFixed(3));
     ticking = false;
   });
 }
 window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll, { passive: true });
 onScroll();
 
 /* ── reveal on enter ────────────────────────────────────── */
