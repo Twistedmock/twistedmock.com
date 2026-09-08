@@ -226,8 +226,8 @@ a{ color:inherit; }
   font-size:clamp(1.05rem,2vw,1.35rem);
 }
 .intro__tag svg{ width:34px; height:34px; }
-.intro__tag path{ stroke-dasharray:100; animation:wave 3.6s var(--ease) infinite; }   /* draws the wave on; pathLength=100 */
-@keyframes wave{ 0%{stroke-dashoffset:100} 60%,100%{stroke-dashoffset:0} }
+.intro__tag svg{ animation:breathe 7s ease-in-out infinite; transform-origin:50% 50%; }   /* the enso breathes, slowly */
+@keyframes breathe{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.07)} }
 .intro__hint{ position:absolute; right:var(--pad); bottom:1.4rem; color:var(--mute-2); font-size:.55rem; letter-spacing:.2em; }
 @media (max-width:720px){ .intro__hint{ display:none } }
 
