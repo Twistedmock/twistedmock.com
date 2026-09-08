@@ -120,7 +120,7 @@ a{ color:inherit; }
 /* ═══════════ the glass ═══════════ */
 
 .cell, .flags li, .cred, .tool, .classes, .timeline, .links a, .btn--glass, .chip,
-.sec--contact > .wrap, .chips li, .logo{
+.sec--contact > .wrap, .chips li, .logo, .langs li{
   position:relative;
   background:var(--glass);
   border:1px solid var(--glass-edge);
@@ -171,7 +171,7 @@ a{ color:inherit; }
   max-width:var(--wrap); margin-inline:auto;
 }
 .top__id{ display:inline-flex; align-items:center; gap:.6rem; color:var(--ink); text-decoration:none; }
-.top__id svg{ width:26px; height:14px; }
+.top__id svg{ width:30px; height:30px; }
 .top__id .mono{ letter-spacing:.2em; }
 .top__nav{ display:flex; align-items:center; gap:.2rem 1.1rem; flex-wrap:wrap; }
 .top__nav a{ color:var(--mute); text-decoration:none; transition:color .3s var(--ease); font-size:.625rem; letter-spacing:.16em; }
@@ -225,9 +225,9 @@ a{ color:inherit; }
   font-family:var(--serif); font-style:italic; font-weight:300; color:var(--ink-2);
   font-size:clamp(1.05rem,2vw,1.35rem);
 }
-.intro__tag svg{ width:34px; height:16px; }
-.intro__tag path{ stroke:var(--aqua); stroke-dasharray:80; animation:wave 3.2s var(--ease) infinite; }
-@keyframes wave{ 0%{stroke-dashoffset:80} 55%,100%{stroke-dashoffset:0} }
+.intro__tag svg{ width:34px; height:34px; }
+.intro__tag path{ stroke-dasharray:100; animation:wave 3.6s var(--ease) infinite; }   /* draws the wave on; pathLength=100 */
+@keyframes wave{ 0%{stroke-dashoffset:100} 60%,100%{stroke-dashoffset:0} }
 .intro__hint{ position:absolute; right:var(--pad); bottom:1.4rem; color:var(--mute-2); font-size:.55rem; letter-spacing:.2em; }
 @media (max-width:720px){ .intro__hint{ display:none } }
 
@@ -370,7 +370,19 @@ a.logo{ text-decoration:none; color:inherit; }
            transition:color .4s var(--ease), transform .4s var(--ease); }
 .chips li:hover{ color:var(--aqua-d); transform:translateY(-1px); }
 
-/* ═══════════ 06 — contact ═══════════ */
+/* ═══════════ 06 — languages ═══════════ */
+
+.langs{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.6rem,1.2vw,.9rem); }
+@media (max-width:860px){ .langs{ grid-template-columns:repeat(2,1fr) } }
+@media (max-width:400px){ .langs{ grid-template-columns:1fr } }
+.langs li{ display:grid; gap:.35rem; align-content:start; padding:clamp(1.1rem,2.2vw,1.5rem) clamp(1rem,1.8vw,1.3rem);
+           transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
+.langs li:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+.langs b{ font-family:var(--serif); font-weight:300; font-size:clamp(1.5rem,3vw,2.1rem); line-height:1.2; color:var(--ink); }
+.langs span{ font-family:var(--mono); font-size:.5625rem; letter-spacing:.14em; text-transform:uppercase; color:var(--aqua-d); }
+.langs em{ font-style:normal; color:var(--mute); font-size:.8125rem; }
+
+/* ═══════════ 07 — contact ═══════════ */
 
 .sec--contact{ padding-bottom:0; padding-inline:clamp(.75rem,3vw,2rem); }
 .sec--contact > .wrap{ padding:clamp(1.6rem,4vw,3rem); border-radius:26px; }
@@ -388,7 +400,6 @@ a.logo{ text-decoration:none; color:inherit; }
 .links a i{ font-style:normal; color:var(--mute-2); transition:transform .4s var(--ease), color .4s var(--ease); }
 .links a:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lg); color:var(--aqua-d); }
 .links a:hover i{ transform:translate(3px,-3px); color:var(--aqua); }
-.langs{ margin-top:clamp(1.6rem,3vw,2.2rem); color:var(--mute); font-size:.5625rem; letter-spacing:.14em; }
 
 .foot{ margin-top:clamp(3.5rem,8vh,5.5rem); border-top:1px solid var(--line-2); padding-block:clamp(2rem,4vw,2.8rem); }
 .foot p{ margin:0; color:var(--mute); font-size:.5625rem; letter-spacing:.07em; line-height:2.1; text-transform:none; max-width:80ch; }

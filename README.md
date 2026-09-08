@@ -17,6 +17,7 @@ assets/css/fonts.css    self-hosted @font-face
 assets/js/surface.js    the water — sun caustics, drifting glints, sparkle, and pointer ripples
 assets/js/main.js       scroll → water depth, reveals, count-up figures
 assets/fonts/           woff2, self-hosted
+assets/img/logo.svg     the twistedmock mark (also favicon.svg, favicon-32.png, apple-touch-icon.png)
 cv.pdf                  one-page CV, generated from the same figures
 .well-known/security.txt  RFC 9116 security contact (mirrored at /security.txt)
 serve.py                static file server used for staging on the VPS; production is GitHub Pages
@@ -36,13 +37,8 @@ highlights, and the vendors' own acknowledgement pages.
 
 ## Where the figures come from
 
-Every number on the page is pulled live from the platforms, not transcribed from a CV:
-
-- **HackerOne GraphQL** (`POST /graphql`). The public schema is locked down, but `__type`
-  introspection still exposes the `User` type, and `thanks_items` returns per-program rank,
-  reputation, and report counts — enough to reconstruct the whole record.
-- **Bugcrowd** `profile-service` API, read from my own authenticated session.
-- Vendor acknowledgement pages for the public credits.
+Every number on the page is checkable against my public HackerOne and Bugcrowd profiles, and every
+hall-of-fame credit links to the organisation's own acknowledgements page.
 
 Only public programs are ever named. Private programs on both platforms are withheld, as their
 disclosure terms require — that restraint is deliberate, and the page says so.
