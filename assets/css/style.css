@@ -120,7 +120,7 @@ a{ color:inherit; }
 /* ═══════════ the glass ═══════════ */
 
 .cell, .flags li, .cred, .tool, .classes, .timeline, .links a, .btn--glass, .chip,
-.sec--contact > .wrap, .chips li, .logo, .langs li{
+.sec--contact > .wrap, .chips li, .logo, .langs li, .weak li{
   position:relative;
   background:var(--glass);
   border:1px solid var(--glass-edge);
@@ -352,6 +352,17 @@ a.logo{ text-decoration:none; color:inherit; }
 .classes li b{ font-family:var(--serif); font-weight:300; font-size:clamp(1.05rem,2vw,1.3rem); color:var(--ink); }
 .classes li em{ font-style:normal; color:var(--mute); font-size:.875rem; }
 @media (max-width:740px){ .classes li{ grid-template-columns:52px 1fr } .classes li em{ grid-column:2 } }
+
+/* the classes above are badge-confirmed; these are the counts behind them */
+.weak__lead{ margin-top:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:.9rem; }
+.weak{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(6,1fr); gap:clamp(.5rem,1.1vw,.75rem); }
+@media (max-width:860px){ .weak{ grid-template-columns:repeat(3,1fr) } }
+@media (max-width:480px){ .weak{ grid-template-columns:repeat(2,1fr) } }
+.weak li{ display:grid; gap:.3rem; padding:.95rem 1rem; border-radius:var(--r-sm); transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
+.weak li:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+.weak b{ font-family:var(--serif); font-weight:200; font-size:clamp(1.7rem,3vw,2.2rem); line-height:1; font-variant-numeric:tabular-nums;
+         background:linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 60%, var(--aqua) 140%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.weak span{ font-family:var(--mono); font-size:.52rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mute); }
 
 /* ═══════════ 05 — tools ═══════════ */
 
