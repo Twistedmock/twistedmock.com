@@ -18,7 +18,7 @@ assets/js/surface.js    the water — sun caustics, drifting glints, sparkle, an
 assets/js/main.js       scroll → water depth, reveals, count-up figures
 assets/fonts/           woff2, self-hosted
 assets/img/logo.svg     the twistedmock mark — a meditator in orbit (also favicon.svg, favicon-32.png, apple-touch-icon.png)
-cv.pdf                  one-page CV, generated from the same figures
+cv.pdf                  two-page CV in my original layout, generated from the same figures
 .well-known/security.txt  RFC 9116 security contact (mirrored at /security.txt)
 serve.py                static file server used for staging on the VPS; production is GitHub Pages
 ```
