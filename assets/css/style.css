@@ -348,15 +348,16 @@ a.logo{ text-decoration:none; color:inherit; }
 }
 .classes li:last-child{ border-bottom:0; }
 .classes li:hover{ padding-left:1.3rem; background:rgba(10,143,168,.06); }
-.classes li span{ color:var(--aqua-d); font-size:.625rem; }
+.classes li span{ color:var(--aqua-d); font-size:.6rem; }
+.classes li span.classes__v{ color:var(--mute-2); }
 .classes li b{ font-family:var(--serif); font-weight:300; font-size:clamp(1.05rem,2vw,1.3rem); color:var(--ink); }
 .classes li em{ font-style:normal; color:var(--mute); font-size:.875rem; }
 @media (max-width:740px){ .classes li{ grid-template-columns:52px 1fr } .classes li em{ grid-column:2 } }
 
 /* the classes above are badge-confirmed; these are the counts behind them */
 .weak__lead{ margin-top:clamp(1.8rem,3.6vw,2.6rem); margin-bottom:.9rem; }
-.weak{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(6,1fr); gap:clamp(.5rem,1.1vw,.75rem); }
-@media (max-width:860px){ .weak{ grid-template-columns:repeat(3,1fr) } }
+.weak{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(.5rem,1.1vw,.75rem); }
+@media (max-width:860px){ .weak{ grid-template-columns:repeat(2,1fr) } }
 @media (max-width:480px){ .weak{ grid-template-columns:repeat(2,1fr) } }
 .weak li{ display:grid; gap:.3rem; padding:.95rem 1rem; border-radius:var(--r-sm); transition:transform .5s var(--ease), box-shadow .5s var(--ease); }
 .weak li:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); }

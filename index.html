@@ -210,19 +210,23 @@
 <section class="sec" id="classes">
   <div class="wrap">
     <p class="mark mono"><span>04</span> What I find</p>
-    <h2 class="reveal">Six OWASP categories, each confirmed by HackerOne's own badge.</h2>
-    <p class="sub reveal">Not a skills list. Badges are only issued on a valid report of that class.</p>
+    <h2 class="reveal">Ten OWASP Top 10 classes, from injection to SSRF.</h2>
+    <p class="sub reveal">Not a skills list. Six carry HackerOne's own badge — issued only on a valid report of that class; the other four are on my record as resolved or triaged reports.</p>
 
     <ul class="classes">
-      <li class="reveal"><span class="mono">A01</span><b>Injection</b><em>SQL and command injection — untrusted input reaching an interpreter.</em></li>
-      <li class="reveal"><span class="mono">A02</span><b>Broken Authentication</b><em>Session and identity flaws — the class that ends in account takeover.</em></li>
-      <li class="reveal"><span class="mono">A04</span><b>XML External Entities</b><em>Parsers coaxed into reading files and reaching internal services.</em></li>
-      <li class="reveal"><span class="mono">A05</span><b>Broken Access Control</b><em>IDOR and privilege escalation — the object is there, the check is not.</em></li>
-      <li class="reveal"><span class="mono">A06</span><b>Security Misconfiguration</b><em>Defaults left in place, surfaces left open, secrets left reachable.</em></li>
-      <li class="reveal"><span class="mono">A07</span><b>Cross-Site Scripting</b><em>Stored, reflected and DOM-based execution in another user's session.</em></li>
+      <li class="reveal"><span class="mono">Badge</span><b>Injection</b><em>SQL and command injection — untrusted input reaching an interpreter.</em></li>
+      <li class="reveal"><span class="mono">Badge</span><b>Broken Authentication</b><em>Session and identity flaws — the class that ends in account takeover.</em></li>
+      <li class="reveal"><span class="mono">Badge</span><b>XML External Entities</b><em>Parsers coaxed into reading files and reaching internal services.</em></li>
+      <li class="reveal"><span class="mono">Badge</span><b>Broken Access Control</b><em>IDOR and privilege escalation — the object is there, the check is not.</em></li>
+      <li class="reveal"><span class="mono">Badge</span><b>Security Misconfiguration</b><em>Defaults left in place, surfaces left open, secrets left reachable.</em></li>
+      <li class="reveal"><span class="mono">Badge</span><b>Cross-Site Scripting</b><em>Stored, reflected and DOM-based execution in another user's session.</em></li>
+      <li class="reveal"><span class="mono classes__v">Valid</span><b>Sensitive Data Exposure</b><em>Information disclosure — my most frequent class: PII, tokens and internals reachable without authorisation.</em></li>
+      <li class="reveal"><span class="mono classes__v">Valid</span><b>Server-Side Request Forgery</b><em>The server made to fetch on my behalf — into metadata endpoints and internal services.</em></li>
+      <li class="reveal"><span class="mono classes__v">Valid</span><b>Open Redirect</b><em>Trust in a link, redirected — the first step of many phishing and token-theft chains.</em></li>
+      <li class="reveal"><span class="mono classes__v">Valid</span><b>Insecure Design</b><em>Business-logic flaws — flows that work as built and fail as intended.</em></li>
     </ul>
 
-    <p class="sub reveal weak__lead">Where my 185 resolved-or-triaged reports landed, in HackerOne's own weakness classes:</p>
+    <p class="sub reveal weak__lead">Where some of my resolved-or-triaged reports landed, in HackerOne's own weakness classes:</p>
     <ul class="weak">
       <li class="reveal"><b>45</b><span>Information disclosure</span></li>
       <li class="reveal"><b>37</b><span>Access control</span></li>
@@ -230,6 +234,8 @@
       <li class="reveal"><b>22</b><span>Cross-site scripting</span></li>
       <li class="reveal"><b>14</b><span>Open redirect</span></li>
       <li class="reveal"><b>6</b><span>SSRF</span></li>
+      <li class="reveal"><b>4</b><span>Insecure design</span></li>
+      <li class="reveal"><b>3</b><span>Injection</span></li>
     </ul>
   </div>
 </section>
